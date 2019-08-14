@@ -65,6 +65,12 @@ describe 'Blackjack Score' do
 end
 
 it 'raises an ArgumentError for scores over 21' do
+  # Arrange
+  hand = ['Queen', 'King', '10']
   
+  #Act/Assert
+  expect {
+  blackjack_score(hand)
+}.must_raise ArgumentError
 end
-end
+end 
