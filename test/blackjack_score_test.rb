@@ -44,7 +44,14 @@ describe 'Blackjack Score' do
   end
   
   it 'calculates aces as 1, if an 11 would cause the score to go over 21' do
+    # Arrange
+    hand = ['Queen', 'King', 'Ace']
     
+    # Act
+    score = blackjack_score(hand)
+    
+    # Assert
+    expect(score).must_equal 21
   end
   
   it 'raises an ArgumentError for invalid cards' do
